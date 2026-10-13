@@ -110,4 +110,176 @@ ul> li> .login:hover {
   color: #3333a1;
   margin: 0;
   white-space: nowrap;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
 }
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5f5f5;
+  padding: 20px;
+}
+
+/* بخش لاگین */
+.login-section {
+  width: 100%;
+  max-width: 450px;
+  position: relative;
+}
+
+/* کارت فرم */
+.login{
+  background: #ffffff;
+  border: 2px solid #1a1a1a;
+  border-radius: 15px;
+  padding: 40px 35px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.otp {
+  background: #ffffff;
+  border: 2px solid #1a1a1a;
+  border-radius: 15px;
+  padding: 40px 35px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  display: none;
+  transition: all 0.3s ease;
+}
+
+.login.active,
+.otp.active {
+  display: block;
+}
+
+/* لوگو */
+.logo-style {
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 25px;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: #1a1a1a;
+  letter-spacing: 1px;
+}
+
+/* هدر فرم */
+.header-login,
+.header-otp {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.h-login,
+.h-otp {
+  font-size: 22px;
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+/* فرم */
+.form-login,
+.form-otp {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-style {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* لیبل */
+.form-style label {
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+  margin-top: 5px;
+}
+
+/* اینپوت‌ها */
+.input {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  background: #fafafa;
+  color: #1a1a1a;
+  outline: none;
+  transition: all 0.3s ease;
+  margin-bottom: 15px;
+}
+
+.input:focus {
+  border-color: #1a1a1a;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.05);
+}
+
+.input::placeholder {
+  color: #999;
+  font-size: 14px;
+}
+
+/* دکمه‌ها */
+.loginPage-btn,
+.otpPage-btn {
+  width: 100%;
+  padding: 13px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  background: #1a1a1a;
+  border: 2px solid #1a1a1a;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  letter-spacing: 0.5px;
+}
+
+.loginPage-btn:hover,
+.otpPage-btn:hover {
+  background: #ffffff;
+  color: #1a1a1a;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.loginPage-btn:active,
+.otpPage-btn:active {
+  transform: translateY(0);
+}
+
+/* پیام خطا */
+.error {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 14px;
+  color: #d32f2f;
+  min-height: 20px;
+}
+
+.error p {
+  padding: 10px;
+  background: #ffebee;
+  border-radius: 8px;
+  border: 1px solid #ffcdd2;
+}
+
+
+
