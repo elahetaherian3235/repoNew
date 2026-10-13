@@ -1,163 +1,113 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-  list-style: none;
-}
-body {
-  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
-  background: #181836;
-  color: rgba(255, 255, 255, 0.8);
-  min-height: 100vh;
-  height: auto;
-}
-.login-section {
-  width: 450px;
-  height: auto;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding: 50px 40px;
-  align-items: center;
-  margin-top: 50px;
-  box-shadow: 1px 1px 10px 3px rgb(75, 57, 12);
-  border-radius: 5%;
-}
-.login-section > form {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  /* gap: 20px; */
-}
-
-.logo-style {
-  border-bottom: 1px solid rgba(38, 30, 7, 0.648);
-}
-
-.h-login {
-  padding-bottom: 50px;
-  padding-top: 20px;
-}
-.login-section > form > div {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 4%;
-  position: relative;
-}
-.back-a {
-  color: rgb(255, 255, 255);
-  font-size: 18px;
-  transition: all 0.5s;
-  padding-bottom: 50px;
-  padding-top: 20px;
-  position: absolute;
-  left: 0;
-}
-
-.form-style {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-.user-login {
-  margin-bottom: 20px;
-}
-.pass-login {
-  margin-bottom: 20px;
-}
-.loginPage-btn {
-  padding: 8px 24px;
-  background: transparent;
-  color: rgb(255, 255, 255);
-  border: 2px solid #333;
-  border-radius: 8px;
-  font-size: 15px;
-  cursor: pointer;
-  transition: all 0.5s;
-}
-.loginPage-btn:hover,
-.back-a:hover {
-  border-color: #f5c542;
-  color: #f5c542;
-}
-
-.input {
-  width: 50%;
-  height: 30px;
-  border-radius: 5%;
-  padding-left: 5px;
-  background: #1a1a2e;
-  border: 2px solid #333;
-  color: white;
-  border: none;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
 }
 header {
-  height: 50px;
+  width: 100%;
+  height: 70px;
   background: #19193a;
-  padding: 0 10px;
+  padding: 0 40px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 nav {
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 10px;
 }
-nav > ul {
+h2 {
+  color: #f5c542;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+ul {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 10px;
+  gap: 30px;
 }
-nav > ul > li > a {
-  color: rgb(250, 248, 248);
-  padding-right: 20px;
+
+ul >li >a {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+ul> li> a:hover {
+  color: #f5c542;
+}
+ul> li >.login {
+  padding: 8px 18px;
+  border-radius: 8px;
+}
+
+ul> li> .login:hover {
+  background: #f5c542;
+  color: #19193a;
 }
 .product-section {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 20px;
-  padding: 20px;
+  padding: 25px;
   border-top: 1px solid gray;
 }
 .card {
   width: 100%;
-  height: 250px;
-  border: 1px solid gray;
-  overflow: hidden;
+  min-height: 180px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  background: #d4dabf;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 7px 18px rgba(0, 0, 0, 0.3);
+}
+.card > img {
+  width: 35%;
+  height: 140px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+.card-info {
+  flex: 1;
+  min-width: 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  padding: 10px;
-  gap: 3px;
-  transition: all 0.5s;
-  border-radius: 10px;
-  box-shadow: 5px 5px 5px rgba(116, 108, 1, 0.308);
+  gap: 15px;
 }
-.card:hover{
-  transform: translateX(3px);
-  }
-.card > img {
+.card-info > h3 {
   width: 100%;
-  height: 60%;
-  object-fit: contain;
-}
-.card > h3 {
   font-size: 14px;
-  margin-top: auto;
-  margin-top: 10px;
+  line-height: 1.8;
+  color: #d89090;
+  margin: 0;
+  overflow-wrap: anywhere;
 }
-.card > p {
-  color: red;
+.card-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.card-container > p {
   font-size: 12px;
-  margin-top: auto;
+  color: #3333a1;
+  margin: 0;
+  white-space: nowrap;
 }
