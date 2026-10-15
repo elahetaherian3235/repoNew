@@ -1,6 +1,6 @@
 "use strict";
 const productSection = document.querySelector(".product-section");
-const loginBtn = document.querySelector(".login");
+const loginBtn = document.querySelector(".loginbtn");
 
 const product = (async () => {
   try {
